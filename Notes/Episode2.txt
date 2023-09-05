@@ -1,0 +1,27 @@
+1. ^ in package json means upgrade to minor version
+2. ~ in package json means upgrade to major version
+
+Usually we prefer ^ over ~
+
+Some Parcel package uses:
+
+1. Minification
+2. Bundling
+3. Compressing
+4. Consistent hashing
+5. HMR - Hot module Replacement
+6. Differential Bundling - support older browsers
+https://parceljs.org/
+
+While building production build:
+
+npm i -D cosmiconfig@8.2.0
+Had to add this because of issue
+https://github.com/parcel-bundler/parcel/issues/9224
+
+Browserlist:
+
+https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
+
+
