@@ -1,0 +1,55 @@
+1. JSX is not HTML but it has HTML like syntax.
+2. Babel is the one which converts JSX into React.createElement.
+3. React.createElement is executed as Object.
+4. The render of ReactDOM converts it into HTML.
+5. Babel is basically a JS compiler or transpiler.
+6.Composite class - Rendering one component inside another
+7. A JS function that returns JSX or react elements is React Component.
+
+TODO:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+https://babeljs.io/
+Sanitize js 
+
+
+Script Type in js:
+
+1. Defer - Doesn't block html parsing. After that it does it's execution 
+2. Async - Doesn't block html parsing. After that it does it's execution. But loads dependencies not in order
+3. Blocking - Used when we need to block render until script is loaded
+4. importmap - Resolves the relative/absolute path dependencies
+5. module - Use JS modules as scripts
+6. nomodule - Use this as fallback for old browsers. The new ones which know of modules will ignore this.
+7. nonce - Security related hash that can be used for Content Security policy
+8. referrerpolicy - This is mainly used for headers
+
+
+ChatGPT:
+You're mostly correct in your descriptions, but let me provide a bit more detail and clarify a few points:
+
+1. **Defer**: You are correct that it doesn't block HTML parsing, and it executes after parsing. Scripts with the `defer` attribute will be executed in the order they appear in the HTML document, right before the `DOMContentLoaded` event.
+
+2. **Async**: You're correct that it doesn't block HTML parsing and executes after parsing. However, you mentioned that it loads dependencies not in order. Async scripts will indeed load in parallel with other resources, but their execution order is not guaranteed. They will execute as soon as they are downloaded, which can lead to out-of-order execution if you have multiple async scripts.
+
+3. **Blocking**: You mentioned that it's used to block rendering until the script is loaded. This is typically true for scripts without the `async` or `defer` attributes. When a browser encounters a blocking script, it will pause parsing and execute the script immediately before continuing with parsing and rendering.
+
+4. **Importmap**: Import maps are not a script type but rather a way to manage JavaScript module dependencies. They allow you to specify how module import specifiers should be mapped to actual file URLs. Import maps are typically used with ES modules.
+
+5. **Module**: You are correct that this is used to define JavaScript modules. ES modules are a way to organize and encapsulate code into reusable components. You can use `import` and `export` statements to work with modules.
+
+6. **Nomodule**: This attribute is indeed used as a fallback for older browsers that don't support ES modules. Browsers that support modules will ignore scripts with `nomodule`.
+
+7. **Nonce**: You mentioned that it's a security-related hash for Content Security Policy (CSP). This is accurate. Nonces are used to specify a cryptographic nonce (number used once) in the CSP header, which allows scripts to run only if their nonce matches the one specified in the CSP policy.
+
+8. **Referrerpolicy**: This attribute is not specific to scripts but can be used with various HTML elements, including `script`. It controls how the browser handles the `Referer` header when making requests for the resource specified in the element's `src` attribute. It's indeed related to security and privacy.
+
+Your explanations are generally correct, but I hope the additional details provided here help clarify these concepts further.
+
+
+
+Side notes:
+CTRL + CMD + Space to insert emoji's
+
+
+
+
