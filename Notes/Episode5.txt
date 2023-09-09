@@ -1,0 +1,14 @@
+- Default export/import
+
+export default Component;
+import Component from 'path
+
+- Named export/import
+
+export const Component;
+import {Component} from 'path';
+
+
+- Can I have default and named exports in one file?
+
+It's important to note that you can have multiple named exports and one default export in a single file, but you can only have one default export per file. The default export is typically used for the main component or value you want to export from the module, while named exports are used for additional functions, constants, or components that you want to make available for import in other modules.

@@ -1,15 +1,15 @@
-Config Driven UI:
-UI is designed based on config from backend JSON.
+- Config Driven UI:
+    UI is designed based on config from backend JSON.
 
-Fragment in React:
-A component can only return one element, but by using a Fragment you can group multiple elements together and then return them as a group.
+- Fragment in React:
+    A component can only return one element, but by using a Fragment you can group multiple elements together and then return them as a group.
 
-Example:
-<>
-    <PostTitle />
-    <PostBody />
-</>
+    Example:
+    <>
+        <PostTitle />
+        <PostBody />
+    </>
 
-React Fiber:
-Algorithm behind react.
-https://github.com/acdlite/react-fiber-architecture
+- React Fiber:
+    Algorithm behind react.
+    https://github.com/acdlite/react-fiber-architecture
