@@ -1,3 +1,43 @@
-#heading {
-    color: red;
+.heading {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar-container > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-container > ul > li {
+    font-size: 20px;
+    padding-top: 14px;
+    padding-right: 10px;
+
+}
+
+.rest-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rest-card {
+    width: 200px;
+    background-color: rgb(216, 214, 214);
+    padding: 5px;
+    margin: 10px;
+}
+
+.rest-card:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.res-logo {
+    width: 200px;
+    height: 200px;
 }
