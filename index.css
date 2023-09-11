@@ -41,3 +41,8 @@
     width: 200px;
     height: 200px;
 }
+
+.filter-container {
+    padding: 10px;
+    cursor: pointer;
+}

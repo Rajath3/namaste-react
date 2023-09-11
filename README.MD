@@ -4,3 +4,4 @@
 2. Episode 2 - Igniting the app
 3. Episode 3 - Laying the Foundation
 4. Episode 4 - Talk is cheap, show me the Code!
+5. Episode 5 - Let's get Hooked
