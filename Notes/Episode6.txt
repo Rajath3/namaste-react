@@ -1,0 +1,16 @@
+- Types of architecture
+
+1. Monolith
+2. Microservices
+    - Holds SRP(Single responsiblity principle)
+
+React always try to render whatever it is present and then rerender when api call happens.  
+
+useEffect - As soon as the rendering is finished. The useEffect is called.
+
+Syntax
+
+useEffect(() => {}, []);
+
+Shimmer UI - Display fake UI until page loads.
+    

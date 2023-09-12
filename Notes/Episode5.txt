@@ -22,3 +22,7 @@ Whenever a state variable changes, react re-renders the component.
 - Reconciliation algorithm - React Fiber
 
 Came in React 16.
+
+
+Read These:
+https://react.dev/learn/preserving-and-resetting-state
