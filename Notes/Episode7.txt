@@ -1,0 +1,30 @@
+- useEffect Hooked
+
+Syntax
+
+useEffect(() => {}. [])
+
+1. If we just use useEffect(() => {}) then every time the page renders, the useEffect will be called.
+2. If we use useEffect(() => {}. []), then the useEffect will be called only on the initial render.
+3. We can also have a state variable inside dependency array useEffect(() => {}. [someStateVariable]), so whenever state variable changes, the useEffect will be called.
+
+
+- useState
+
+1. Don't use inside conditional or declare outside of functional component.
+
+----
+
+React Router Dom
+
+Mainly 2 functions:
+1. createbrowserRouter - for config
+2. Routerprovider - for rendering
+
+
+- Anything starting with use , that is a hook. Common convention.
+
+
+
+
+
