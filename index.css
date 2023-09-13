@@ -58,3 +58,18 @@
     height: 300px;
     background-color: lightgray;
 }
+
+.login {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filter-container {
+    display: flex;
+}
+
+.search-btn {
+    margin-left: 2px;
+    margin-right: 10px;
+}

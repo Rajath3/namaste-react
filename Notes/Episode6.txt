@@ -13,4 +13,11 @@ Syntax
 useEffect(() => {}, []);
 
 Shimmer UI - Display fake UI until page loads.
+
+----
+
+Why do we use useState and not Js variable?
+
+Because everytime the state variable changes the component is being re rendered.
+But that doesn't happen for normal JS variable.
     
