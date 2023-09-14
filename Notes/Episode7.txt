@@ -26,5 +26,9 @@ Mainly 2 functions:
 
 
 
+- Donot use anchor tag in React, because it reloades the whole page.
+
+React is Single page application, because the component changes, not the whole page is changing.(Via Client side routing).
+
 
 
