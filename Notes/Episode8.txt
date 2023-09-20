@@ -1,0 +1,30 @@
+- Why do we use super(props) in constructor?
+
+Because when we extend the component class from react.component, we have to get the props via parent itself.
+
+- React class based component - lifecycle methods
+
+1. Constructor is called
+2. Render is called 
+3. ComponentDidMount is called
+    - This is mainly used to make API calls, why?. Because we don't wait for page to load after api call, we render, then call api, then re-render component. React main thing is it can re-render that fast and efficiently.
+    - This is similar to useEffect Hook.
+4. Whenever there are multiple child components to render. React basically renders them in batches and then goes on to commit phase.
+    Parent Constructor
+    About.js:16 Parent Render
+
+    UserClass.js:12 First Child Constructor
+    UserClass.js:20 FirstChild Render
+    
+    UserClass.js:12 Second Child Constructor
+    UserClass.js:20 SecondChild Render
+
+    <DOM UPDATED>
+    UserClass.js:16 FirstChild Component did mount
+    UserClass.js:16 SecondChild Component did mount
+    About.js:12 Parent Component did mount
+5. Refer https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ for react lifecycle method diagram
+
+
+
+
