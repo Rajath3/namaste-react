@@ -24,6 +24,8 @@ Because when we extend the component class from react.component, we have to get 
     UserClass.js:16 SecondChild Component did mount
     About.js:12 Parent Component did mount
 5. Refer https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ for react lifecycle method diagram
+6. AFter we use setState, the updating phase gets started and ComponentDidUpdate is called after render method.
+7. ComponentWillUnmount is called when component is switched to other component.
 
 
 

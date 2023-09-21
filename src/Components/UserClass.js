@@ -6,31 +6,46 @@ class UserClass extends React.Component {
         super(props);
 
         this.state = {
-            count: 0
+            userInfo: {
+                login: "Something",
+                type: "Some type",
+                avatar_url: "http://dummyimg.com"
+            }
         }
 
-        console.log(this.props.name + " Child Constructor");
+        // console.log(this.props.name + " Child Constructor");
     }
 
-    componentDidMount() {
-        console.log(this.props.name + "Child Component did mount");
+    async componentDidMount() {
+        const data = await fetch("https://api.github.com/users/Rajath3");
+
+        const json = await data.json();
+
+        console.log(json);
+
+        this.setState({
+            userInfo: json
+        })
+    }
+
+    componentDidUpdate() {
+        console.log("Component Did Update");
+    }
+
+    componentWillUnmount() {
+        console.log("Component Unmounted");
     }
 
     render() {
-        console.log(this.props.name + "Child Render");
+        // console.log(this.props.name + "Child Render");
 
-        const {name, twitterHandle} = this.props;
-        const { count } = this.state;
-
-        const updateCount = () => {
-            this.setState({count: count + 1})
-        }
+        const {login, type, avatar_url} = this.state.userInfo;
 
         return (
             <div>
-                <h2>Name: {name}</h2>
-                <h3>Twitter handle: {twitterHandle}</h3>
-                <button onClick={() => updateCount()}>Clicked {count} times</button>
+                <img src={avatar_url} />
+                <h2>Name: {login}</h2>
+                <h3>Location: {type}</h3>
             </div>
         )
     }

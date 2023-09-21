@@ -7,3 +7,4 @@
 5. Episode 5 - Let's get Hooked
 6. Episode 6 - Exploring the World
 7. Episode 7 - Finding the Path
+8. Episode 8 - Let's get Classy
