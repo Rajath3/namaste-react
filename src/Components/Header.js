@@ -1,10 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Heading = () => {
     const [buttonName, setbuttonName] = useState("login");
     console.log('Rendered everytime something changes')
+
+    const online = useOnlineStatus();
 
     return (
         <div className='heading'>
@@ -14,6 +17,7 @@ const Heading = () => {
 
             <div className='navbar-container'>
                 <ul className='nav'>
+                    <li>Online: {online ? "🍏" : "🍎"  }</li>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About Us</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>

@@ -8,3 +8,4 @@
 6. Episode 6 - Exploring the World
 7. Episode 7 - Finding the Path
 8. Episode 8 - Let's get Classy
+9. Episode 9 - Optimising our App
