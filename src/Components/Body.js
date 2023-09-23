@@ -11,6 +11,10 @@ const Body = () => {
 
     useEffect(() => {
         fetchData()
+
+        return () => {
+            console.log('Unmounting in functional component');
+        }
     }, [])
 
     fetchData = async () => {

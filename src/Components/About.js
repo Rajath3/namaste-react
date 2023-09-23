@@ -1,5 +1,7 @@
 import UserClass from "./UserClass";
+import User from "./User";
 import { Component } from "react";
+import UserTime from "./UserTimer";
 
 class About extends Component {
     constructor(props) {
@@ -17,7 +19,8 @@ class About extends Component {
         return (
             <div>
                 <h1>About Page</h1>
-                <UserClass name={"Rajath"} twitterHandle={"@rajathhr"}/>
+                {/* <UserClass name={"Rajath"} twitterHandle={"@rajathhr"}/> */}
+                <UserTime />
             </div>
         )
     }
