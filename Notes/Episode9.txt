@@ -1,0 +1,5 @@
+1. Online hook.
+2. Bundling - Make one file out of all files. One js file, one css file etc
+3. Code splittling/ chunking/lazy loading/ Dynamic bundling. Break doen the bundling process.
+ - Logically divide the componenents into bundles.
+ - Lazy loading is very useful when bundle size is becoming big or page load issue is happening.
