@@ -1,0 +1,12 @@
+1. What is SASS and SCSS?
+    - SASS and SCSS are CSS pre-processors that add features like nesting, variables, mixins, and functions to standard CSS, making it more efficient and maintainable. They compile into regular CSS when you're ready to deploy your code to a website
+
+2. What are styled components?
+
+3. Some other libraries/frameworks.
+    - Material UI
+    - BootStrap
+    - Chakra UI
+    - Ant Design
+
+4. Parcel only includes the CSS that is being used by the app for Tailwind. Also it is lightweight.
