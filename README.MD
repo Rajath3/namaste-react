@@ -9,3 +9,5 @@
 7. Episode 7 - Finding the Path
 8. Episode 8 - Let's get Classy
 9. Episode 9 - Optimising our App
+10. Episode 10 - Jo Dikta hai, vo bikta hai
+11. Episode 11 - Data is the new Oil
