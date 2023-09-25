@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {promotedRestaurantCard} from "./RestaurantCard";
 // Named import, React must be default import
 import {useState, useEffect}from 'react'
 import Shimmer from './Shimmer';
@@ -10,6 +10,8 @@ const Body = () => {
     const [listOfRestaurants, setlistOfRestaurants] = useState([]);
     const [searchValue, setSearchValue] = useState('')
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+
+    const PromotedResCard = promotedRestaurantCard(RestaurantCard);
 
     useEffect(() => {
         fetchData()
@@ -27,6 +29,7 @@ const Body = () => {
         setlistOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
         setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
     }
 
     // if (listOfRestaurants.length == 0) {
@@ -69,7 +72,7 @@ const Body = () => {
 
             <div className='flex flex-wrap justify-center bg-gray-100'>
                 {filteredRestaurant.map((restaurant) => (
-                     <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><RestaurantCard  resData={restaurant.info}/></Link>
+                     <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}><PromotedResCard resData={restaurant.info}/></Link>
                 ))}
                
             </div>

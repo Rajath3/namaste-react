@@ -1,0 +1,5 @@
+Higher Order Component:
+ - Takes a component, enhances it and returns back a new component.
+
+ Pure component:
+    - If it is not (behaviour) modified if anything is changed.

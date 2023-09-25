@@ -13,4 +13,15 @@ const RestaurantCard = (props) => {
     )
 }
 
+export const promotedRestaurantCard = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div>
+                <label className="bg-black absolute text-white m-2 p-1 rounded-lg">{props.resData.isOpen ? 'Open' : 'Closed'}</label>
+                <RestaurantCard {...props}/>
+            </div>
+        )
+    }
+}
+
 export default RestaurantCard;
