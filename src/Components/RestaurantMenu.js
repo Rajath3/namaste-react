@@ -8,11 +8,13 @@ import RestaurantCategory from './RestaurantCategory';
 const RestaurantMenu = () => {
     const { resId } = useParams();
     const menuObj = useRestaurantMenu(resId);
-   
+    const [showIndex, setShowIndex] = useState(0);
+    let lastIndex = null;
 
     if (menuObj === null) return <Shimmer/>
 
-    const { name, cuisines, avgRating, costForTwoMessage } = menuObj?.cards[0]?.card?.card?.info
+    console.log(menuObj);
+    const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId } = menuObj?.cards[0]?.card?.card?.info
 
     const {itemCards} = menuObj?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
@@ -22,8 +24,10 @@ const RestaurantMenu = () => {
         <div >
             <h1 className="text-center font-bold text-xl p-2 m-2">{name}</h1>
             <h4 className='text-center font-bold text-lg p-1'>{costForTwoMessage}</h4>
-            {categoryCards.map((category) => 
-                <RestaurantCategory category={category}/>
+            {categoryCards.map((category, index) => 
+                <RestaurantCategory  key={category?.card?.card?.title} category={category} showItem={index == showIndex ?  true : false}
+                setShowIndex={() => setShowIndex(index)}
+                />
             )}
 
         </div>

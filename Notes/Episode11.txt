@@ -3,3 +3,11 @@ Higher Order Component:
 
  Pure component:
     - If it is not (behaviour) modified if anything is changed.
+
+Controlled component
+    - States/props is controlled by parent
+Uncontrolled component
+    - Has own States
+
+Lifting state up:
+    - Lift state one level up, to control all the children
