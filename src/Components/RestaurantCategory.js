@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ItemContainer from "./ItemContainer";
 
-const RestaurantCategory = ({category, showItem, setShowIndex}) => {
+const RestaurantCategory = ({category, showItem, setShowIndex, setShowSameIndex, showSameIndex}) => {
     // const [showItem, setShowItem] = useState(false);
     
     const showCard = () => {
-        // setShowItem(!showItem);
         setShowIndex();
+        setShowSameIndex();
     }
     return (
         <div>
