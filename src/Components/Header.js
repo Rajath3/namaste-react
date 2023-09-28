@@ -1,13 +1,15 @@
 import { LOGO_URL } from "../utils/constants";
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Heading = () => {
     const [buttonName, setbuttonName] = useState("login");
     console.log('Rendered everytime something changes')
 
     const online = useOnlineStatus();
+    const {loggedInUser} = useContext(UserContext);
 
     return (
         <div className='flex justify-between bg-orange-100'> 
@@ -26,6 +28,7 @@ const Heading = () => {
                     <button className="bg-blue-100 p-2 rounded-lg ml-4" onClick={() => {
                         setbuttonName(buttonName == 'logout' ? 'login' : 'logout');
                     }}>{buttonName}</button>
+                    <li className="">{loggedInUser}</li>
                 </ul>
             </div>
         </div>

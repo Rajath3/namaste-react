@@ -13,12 +13,9 @@ const RestaurantMenu = () => {
 
     if (menuObj === null) return <Shimmer/>
 
-    console.log(menuObj);
     const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId } = menuObj?.cards[0]?.card?.card?.info
 
     const categoryCards = menuObj?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter((card) => card?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-
-    console.log(showSameIndex);
 
     return (
         <div >

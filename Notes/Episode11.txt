@@ -11,3 +11,14 @@ Uncontrolled component
 
 Lifting state up:
     - Lift state one level up, to control all the children
+
+Props Drilling:
+    - Passing props down the children is a problem
+    - To solve this we have something known as context
+    - We have hooks to create context i.e createContext and useCOntext
+    - Suppose we want to access it in class based component, we import the context and use <Context.Consumer>
+        {(data) => console.log(data)}
+    </Context.Consumer>
+    - There is also <Context.Provider>, if we wrap it around components we render. We get context set by this.
+    
+
