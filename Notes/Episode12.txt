@@ -1,0 +1,16 @@
+- Redux is not mandatory
+- https://github.com/pmndrs/zustand Alternative for Redux
+
+- Redux Architecture:
+    - Redux is a centralized way of storing States/data.
+    - We can have slices inside this. Each slice is logically divided. For example User may be once slice, Cart might be another.
+    - So we cannot directly modify any state in redux. Let's say we have a add button on card, there will be dispatcher that triggers an action, the action in turn calls a function to modify slice in redux store.
+
+    Add --> Dispatch(Action) --> Reducer --> Update slice of Redux store
+
+    Cart -->Is subscribed through Selector --> Store
+
+    - that function is known as Reducer.
+    - Selector is used for reading data from slice.(This phenomenon is called subscribing to the store).
+
+

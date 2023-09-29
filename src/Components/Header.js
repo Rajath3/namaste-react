@@ -3,6 +3,8 @@ import {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import {useSelector} from 'react-redux';
+import appStore from "../utils/appStore";
 
 const Heading = () => {
     const [buttonName, setbuttonName] = useState("login");
@@ -10,6 +12,9 @@ const Heading = () => {
 
     const online = useOnlineStatus();
     const {loggedInUser} = useContext(UserContext);
+
+    const itemsAdded = useSelector((store)=> store.cart.items);
+    console.log(itemsAdded);
 
     return (
         <div className='flex justify-between bg-orange-100'> 
@@ -24,7 +29,7 @@ const Heading = () => {
                     <li className="px-2"><Link to='/about'>About Us</Link></li>
                     <li className="px-2"><Link to='/contact'>Contact</Link></li>
                     <li className="px-2"><Link to='/grocery'>Grocery</Link></li>
-                    <li className="px-2">Cart</li>
+                    <li className="px-2">Cart - {itemsAdded.length} items</li>
                     <button className="bg-blue-100 p-2 rounded-lg ml-4" onClick={() => {
                         setbuttonName(buttonName == 'logout' ? 'login' : 'logout');
                     }}>{buttonName}</button>
