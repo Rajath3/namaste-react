@@ -1,0 +1,27 @@
+- 3 Types of Testing
+    - Unit Testing
+    - Integration Testing
+    - End to End Testing
+
+- Unit Testing
+    - Test component in isolation
+
+- Integration Testing
+    - Testing interaction between components.
+
+- E to E Testing
+    - Simulating user flow
+
+- Create react app has built in Testing library.(React Testing Library).
+    - This uses JEST(JS test framework).
+
+- JSDOM is like browser which simulates browser like env for testing.
+
+- Command for jest config: npx jest --init
+
+- __ double underscores methods are known as dunder methods. May be because those should be reserved keywords.
+
+
+
+
+
