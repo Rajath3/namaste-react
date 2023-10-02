@@ -13,4 +13,18 @@
     - that function is known as Reducer.
     - Selector is used for reading data from slice.(This phenomenon is called subscribing to the store).
 
+    - Noted on Redux
+        - Subscribe to the correct slice to optimise performance.
+        - Older version of Redux didn't allow to mutate the state, but newer one asks us to do so.
+        - Redux uses immer js library for mutations. https://immerjs.github.io/immer/
+        - Either mutate state or return (to modify original items)
+    
+    -  Look more Deep clone(Cloning) in JS.
+
+    HW:
+     - RTK Query https://redux.js.org/tutorials/essentials/part-7-rtk-query-basics
+     - Middle ware and thungs
+     
+
+
 

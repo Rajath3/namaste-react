@@ -29,7 +29,7 @@ const Heading = () => {
                     <li className="px-2"><Link to='/about'>About Us</Link></li>
                     <li className="px-2"><Link to='/contact'>Contact</Link></li>
                     <li className="px-2"><Link to='/grocery'>Grocery</Link></li>
-                    <li className="px-2">Cart - {itemsAdded.length} items</li>
+                    <li className="px-2"><Link to='/cart'>Cart - {itemsAdded.length} items</Link></li>
                     <button className="bg-blue-100 p-2 rounded-lg ml-4" onClick={() => {
                         setbuttonName(buttonName == 'logout' ? 'login' : 'logout');
                     }}>{buttonName}</button>

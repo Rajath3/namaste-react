@@ -3,7 +3,6 @@ import {ITEMS_URL} from './../utils/constants';
 import { useDispatch } from 'react-redux';
 
 const ItemContainer = ({data}) => {
-
     const dispatch = useDispatch();
 
     const handleAddItem = (item) => {
