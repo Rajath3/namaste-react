@@ -4,17 +4,15 @@ import {Link} from 'react-router-dom';
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
 import {useSelector} from 'react-redux';
-import appStore from "../utils/appStore";
 
 const Heading = () => {
     const [buttonName, setbuttonName] = useState("login");
-    console.log('Rendered everytime something changes')
+    // console.log('Rendered everytime something changes')
 
     const online = useOnlineStatus();
     const {loggedInUser} = useContext(UserContext);
 
     const itemsAdded = useSelector((store)=> store.cart.items);
-    console.log(itemsAdded);
 
     return (
         <div className='flex justify-between bg-orange-100'> 
