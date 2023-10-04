@@ -21,6 +21,9 @@
 
 - __ double underscores methods are known as dunder methods. May be because those should be reserved keywords.
 
+- @babel/preset-react for adding jsx compatibility to test cases.
+
+- Install @testing-library/jest-dom
 
 
 
