@@ -52,7 +52,7 @@ const Body = () => {
         <div className='body'>
             <div className='flex justify-center bg-gray-100 sm: bg-white-100'>
                 <div className="flex p-10">
-                    <input type="text" className="border-2 border-black-400 w-400" value={searchValue} onChange={(e) =>{
+                    <input type="text" className="border-2 border-black-400 w-400" value={searchValue} data-testid="inputForSearch" onChange={(e) =>{
                       setSearchValue(e.target.value)  
                     }}/>
                     <button className="p-4 bg-blue-100" onClick={() => {
@@ -66,7 +66,7 @@ const Body = () => {
                 <button className="w-[156px] mt-[38px] mb-[35px] bg-yellow-100 border-4 border-black-100" 
                 onClick={() => {
                     const list = listOfRestaurants.filter(
-                        (res) => res.info.avgRating > 4
+                        (res) => res.info.avgRating > 4.5
                     )
                     setFilteredRestaurant(list);
                 }}>Top Restaurant Filter</button>
