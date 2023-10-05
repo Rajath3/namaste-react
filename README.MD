@@ -11,3 +11,5 @@
 9. Episode 9 - Optimising our App
 10. Episode 10 - Jo Dikta hai, vo bikta hai
 11. Episode 11 - Data is the new Oil
+12. Episode 12 - Let's build our store
+13. Episode 13 - Time for the test
